@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+body {
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #f2f2f2, #d9d9d9, #bfbfbf, #e6e6e6);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+header {
+    display: none;
+}
+.medata{
+    font-size: larger;
+}
+.me {
+    position: relative;
+    padding: 4rem 5%;
+    color: white;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.me::before {      /* obviously i took help, srry still learning */ 
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("gamingroom.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.03);
+    filter: blur(4px) brightness(0.55);
+    z-index: 0;
+}
+
+.me > * {                  /* srry still learning */
+    position: relative;
+    z-index: 1;
+}
+
+.me h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.me p {
+    font-style: italic;
+    font-weight: 400;
+    color: #f1f1f1;
+}
+
+.btn {
+    display: inline-block;
+    background: #43007d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section {
+    padding: 2rem 5%;
+}
+
+.skillspace, .projectspace {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill, .project {
+    background: lightslategrey;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.skill:hover, .project:hover {
+    transform: translateY(-5px);
+}
+#linkedin{
+    height: 40px;
+    width: 40px;
+}
+#insta{
+    height: 40px;
+    width: 40px;
+}
+
+
+.valo {
+    position: relative;
+    color: white;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    z-index: 1;
+    margin-top: 2rem;
+}
+
+.valo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("valo.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) brightness(0.55);
+    z-index: -1;
+}
+
+
+.contact p{
+    font-size: larger;
+}
+footer {                       /* discovered it myself */
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0.5rem 0;
+    animation: bg-roll 6s linear infinite;
+    background: linear-gradient(100deg, #56CCF2, #EAB0D9, lightgreen, #6eaeee, lightblue, rgb(217, 141, 212), violet, #56CCF2);
+    background-size: 600% 100%;
+}
+
+@keyframes bg-roll {
+    0% {background-position: 0% 50%;}
+    100% {background-position: 200% 50%;}
+}
